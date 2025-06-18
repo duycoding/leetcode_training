@@ -1,15 +1,19 @@
 package com.duycoding;
 
+import com.duycoding.DailyQuestions.DivideArrayIntoArray;
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(4);
-        l1.next.next = new ListNode(3);
+        int []nums = {1,3,4,8,7,9,3,5,1};
 
-        ListNode l2 = new ListNode(5);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);
+        int k = 2;
 
-        System.out.println(AddTwoNumbers.addTwoNumbers(l1, l2));
+        int [][] result = DivideArrayIntoArray.divideArray(nums, k);
+
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i][0] + ", " + result[i][1] + ", "+ result[i][2]);
+        }
     }
 }
